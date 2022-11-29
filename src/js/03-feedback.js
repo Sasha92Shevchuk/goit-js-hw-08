@@ -22,7 +22,7 @@ updateFieldsForm();
 
 function onIputHandler(e) {
   const { email, message } = e.elements;
-  formFields = {
+  const formFields = {
     email: email.value,
     message: message.value,
   };
