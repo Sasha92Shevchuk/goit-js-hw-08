@@ -16,6 +16,10 @@ player.getVideoTitle().then(function (title) {
 const onSaveTimeHandler = function (data) {
   //   console.log('data!', data.seconds);
   localStorage.setItem('videoplayer-current-time', data.seconds);
+
+  if (data.seconds > 565) {
+    localStorage.clear();
+  }
 };
 player.on('timeupdate', throttle(onSaveTimeHandler, 1000));
 
