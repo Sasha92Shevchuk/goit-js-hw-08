@@ -17,7 +17,7 @@ const onSaveTimeHandler = function (data) {
   //   console.log('data!', data.seconds);
   localStorage.setItem('videoplayer-current-time', data.seconds);
 
-  if (data.seconds > 565) {
+  if (data.seconds === data.duration) {
     localStorage.clear();
   }
 };
